@@ -1,0 +1,136 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+system("title Calculadora");
+system("color 17");
+char se;
+se = '%';
+float resultado, num1, num2;
+char operacao;
+int num3;
+double expoente;
+while (1)
+{
+printf("\n\t\t\t\tCALCULADORA");
+printf("\n\n\t[+] - SOMA [E] - EXPONENCIACAO");
+printf("\n\t[-] - SUBTRACAO [R] - RAIZ QUADRADA");
+printf("\n\t[*] - MULTIPLICACAO [P] - PORCENTAGEM");
+printf("\n\t[/] - DIVISAO [S] - SAIR");
+printf("\n\n\n - Entre com a opção desejada: ");
+operacao = getchar();
+switch (operação)
+{
+case '+':
+printf("\n\n\t S O M A");
+printf("\n\n - Entre com o primeiro valor: ");
+scanf("%f",&num1);
+fflush(stdin);
+printf("\n - Entre com o segundo valor: ");
+scanf("%f",&num2);
+fflush(stdin);
+resultado = num1 + num2;
+printf("\n\n - Resultado da soma entre os dois numeros: %.2f\n\n",resultado);
+system("pause");
+system("cls");
+break;
+case '-':
+printf("\n\n\t S U B T R A C A O");
+printf("\n\n - Entre com o primeiro valor: ");
+scanf("%f",&num1);
+fflush(stdin);
+printf("\n - Entre com o segundo valor: ");
+scanf("%f",&num2);
+fflush(stdin);
+resultado = num1 - num2;
+printf("\n\n - Resultado da subtracao entre os dois numeros: %.2f\n\n",resultado);
+system("pause");
+system("cls");
+break;
+case '*':
+printf("\n\n\t M U L T I P L I C A C A O");
+printf("\n\n - Entre com o primeiro valor: ");
+scanf("%f",&num1);
+fflush(stdin);
+printf("\n - Entre com o segundo valor: ");
+scanf("%f",&num2);
+fflush(stdin);
+resultado = num1 * num2;
+printf("\n\n - Resultado da multiplicacao entre os dois numeros: %.2f\n\n",resultado);
+system("pause");
+system("cls");
+break;
+case '/':
+printf("\n\n\t D I V I S A O");
+printf("\n\n - Entre com o primeiro valor: ");
+scanf("%f",&num1);
+fflush(stdin);
+printf("\n - Entre com o segundo valor: ");
+scanf("%f",&num2);
+fflush(stdin);
+if ( num2 == 0 || num1 == 0 )
+{
+printf("\n\n - ERRO - Divisao por Zero.\n\n");
+}
+else
+{
+resultado = num1 / num2;
+printf("\n\n - Resultado da divisao entre os dois numeros: %.2f\n\n",resultado);
+}
+system("pause");
+system("cls");
+break;
+case 'E':
+case 'e':
+printf("\n\n\t E X P O N E N C I A C A O");
+printf("\n\n - Entre com a base: ");
+scanf("%f",&num1);
+fflush(stdin);
+printf("\n - Entre com o expoente: ");
+scanf("%d",&num3);
+fflush(stdin);
+expoente = pow(num1,num3);
+printf("\n\n - Resultado: %.0f elevado a %d e %g.\n\n",num1,num3,expoente);
+system("pause");
+system("cls");
+break;
+case 'R':
+case 'r':
+printf("\n\n\t R A I Z Q U A D R A D A");
+printf("\n\n - Entre com um valor: ");
+scanf("%f",&num1);
+fflush(stdin);
+resultado = sqrt(num1);
+printf("\n\n - A Raiz quadrada de %.0f e: %.2f.\n\n",num1,resultado);
+system("pause");
+system("cls");
+break;
+case 'P':
+case 'p':
+printf("\n\n\t P O R C E N T A G E M");
+printf("\n\n - Entre com um valor: ");
+scanf("%f",&num1);
+fflush(stdin);
+printf("\n - Entre com a porcentagem: ");
+scanf("%f",&num2);
+fflush(stdin);
+resultado = num1 * num2 / 100;
+printf("\n\n - Resultado: %.2f %c de %.2f = %.2f.\n\n",num2,se,num1,resultado);
+system("pause");
+system("cls");
+break;
+case 'S':
+case 's':
+return 0;
+default:
+printf("\n\n - ERRO - Opcao Invalida.\n\n");
+system("pause");
+fflush(stdin);
+system("cls");
+}
+}
+system("pause");
+system("cls");
+return 0;
+}
